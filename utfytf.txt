@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listino Prodotti</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .category {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        .product {
+            cursor: pointer;
+            margin: 10px 0;
+            color: blue;
+            text-decoration: underline;
+        }
+        .details {
+            display: none; /* Nascondi i dettagli inizialmente */
+            margin-left: 20px; /* Aggiungi un margine per indentare */
+        }
+        img {
+            max-width: 100px; /* Limita la larghezza delle immagini */
+            height: auto; /* Mantiene le proporzioni */
+        }
+    </style>
+    <script>
+        function toggleDetails(productId) {
+            const details = document.getElementById(productId);
+            if (details.style.display === "none") {
+                details.style.display = "block"; // Mostra i dettagli
+            } else {
+                details.style.display = "none"; // Nascondi i dettagli
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Listino Prodotti</h1>
+
+    <div class="category">Categoria 1</div>
+    <div class="product" onclick="toggleDetails('product1Details')">Prodotto 1</div>
+    <div id="product1Details" class="details">
+        <p>Descrizione del prodotto 1</p>
+        <p>Prezzo: €10.00</p>
+        <img src="prodotto1.jpg" alt="Prodotto 1">
+        <p><a href="https://www.youtube.com/watch?v=esempio1" target="_blank">Guarda il video</a></p>
+    </div>
+
+    <div class="product" onclick="toggleDetails('product2Details')">Prodotto 2</div>
+    <div id="product2Details" class="details">
+        <p>Descrizione del prodotto 2</p>
+        <p>Prezzo: €15.00</p>
+        <img src="prodotto2.jpg" alt="Prodotto 2">
+        <p><a href="https://www.youtube.com/watch?v=esempio2" target="_blank">Guarda il video</a></p>
+    </div>
+
+    <div class="category">Categoria 2</div>
+    <div class="product" onclick="toggleDetails('product3Details')">Prodotto 3</div>
+    <div id="product3Details" class="details">
+        <p>Descrizione del prodotto 3</p>
+        <p>Prezzo: €20.00</p>
+        <img src="prodotto3.jpg" alt="Prodotto 3">
+        <p><a href="https://www.youtube.com/watch?v=esempio3" target="_blank">Guarda il video</a></p>
+    </div>
+
+    <!-- Aggiungi altri prodotti qui -->
+
+</body>
+</html>
